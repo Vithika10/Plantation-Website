@@ -2,30 +2,35 @@
 const nodemailer = require("nodemailer");
 
 async function notifyadmin(){
+
+// Create a transporter
 const transporter = nodemailer.createTransport({
-  host: "smtp.forwardemail.net",
-  port: 465,
-  secure: true,
+  service: 'gmail',
   auth: {
-    // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: "REPLACE-WITH-YOUR-ALIAS@YOURDOMAIN.COM",
-    pass: "REPLACE-WITH-YOUR-GENERATED-PASSWORD",
-  },
+    user:'vithikavshrouty@gmail.com',
+    pass:'vithika@123',
+
+  }
 });
 
-// async..await is not allowed in global scope, must use a wrapper
-async function main() {
-  // send mail with defined transport object
-  const info = await transporter.sendMail({
-    from: '"Fred Foo 👻" <foo@example.com>', // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
-  });
+// Set up email options
+const mailOptions = {
+  from: req.body.email,
+  to: 'vithikavshrouty@gmail.com',
+  subject: `Message from ${req.body.email} : ${req.body.subject}`, // Use backticks for template literals
+  text: req.body.message,
+};
 
-  console.log("Message sent: %s", info.messageId);
-}
+
+// Send email
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
 }
 
 async function main(){
