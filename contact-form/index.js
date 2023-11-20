@@ -27,3 +27,7 @@ async function main() {
   console.log("Message sent: %s", info.messageId);
 }
 }
+
+async function main(){
+await notifyadmin()
+}
