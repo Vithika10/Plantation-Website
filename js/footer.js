@@ -21,3 +21,11 @@ function toggleMenu() {
     var menu = document.getElementById("menu-main-menu");
     menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
+
+//navbar js 
+document.getElementById('toggleButton').addEventListener('click', toggleMenu);
+    
+function toggleMenu() {
+    var menu = document.getElementById('greennature-responsive-navigation');
+    menu.classList.toggle('active');
+}

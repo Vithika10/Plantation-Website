@@ -1,0 +1,31 @@
+
+.dl-trigger {
+    display: none; /* Hide the button by default */
+}
+
+.greennature-responsive-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.greennature-responsive-navigation li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px wide */
+    .dl-trigger {
+        display: block; /* Show the button for small screens */
+    }
+
+    .greennature-responsive-navigation {
+        display: none; /* Hide the navigation by default */
+    }
+
+    .greennature-responsive-navigation.active {
+        display: block; /* Show the navigation when the button is clicked */
+    }
+}

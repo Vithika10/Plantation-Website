@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/style-responsive.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
 
 
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=latin&amp;' type='text/css' media='all' />
@@ -72,13 +73,14 @@
                     <!-- logo ends -->
                     
                     <div class="greennature-responsive-navigation dl-menuwrapper" id="greennature-responsive-navigation">
-                        <button class="dl-trigger">Open Menu</button>
+                        <button class="dl-trigger" onclick="toggleMenu()">Open Menu</button>
                         <ul id="menu-main-menu" class="dl-menu greennature-main-mobile-menu">
                             <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Home</a></li>
                             <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="about-2.html" class="sf-with-ul-pre"><i class="fa fa-file-text-o"></i>About us</a>
                               <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="events-grid.html" class="sf-with-ul-pre"><i class="bi bi-calendar2-event"></i>events</a>
                                   <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="gallery-2-columns-with-caption.html" class="sf-with-ul-pre"><i class="bi bi-image"></i>Gallery</a>
-                                      <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="contact-form/public/contact-page.html" class="sf-with-ul-pre"><i class="fa fa-file-text-o"></i>contact us</a>      
+                                      <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="contact-form/public/contact-page.html" class="sf-with-ul-pre"><i class="fa fa-file-text-o"></i>contact us</a>  
+                                        <li><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_N3BFEOTkZ219xe" async> </script> </form>   </li>     
                         </ul>
                     </div>
                 </div>
@@ -94,9 +96,10 @@
                                   <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="about-2.html" class="sf-with-ul-pre"><i class="fa fa-file-text-o"></i>About us</a>
                                     <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="events-grid.html" class="sf-with-ul-pre"><i class="bi bi-calendar2-event"></i>events</a>
                                         <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="gallery-2-columns-with-caption.html" class="sf-with-ul-pre"><i class="bi bi-image"></i>Gallery</a>
-                                            <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="contact-form/public/contact-page.html" class="sf-with-ul-pre"><i class="fa fa-file-text-o"></i>contact us</a>      
+                                            <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="contact-form/public/contact-page.html" class="sf-with-ul-pre"><i class="fa fa-file-text-o"></i>contact us</a> 
+                                                <li><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_N3BFEOTkZ219xe" async> </script> </form>   </li>  
                                 </li>  
-                                <a class="greennature-donate-button greennature-lb-payment"><span class="greennature-button-overlay"></span><span class="greennature-button-donate-text">Donate</span></a>
+                                
 
                         </nav>
                         <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
@@ -510,6 +513,7 @@
     
 <!-- scripts links -->
 <script src="js/footer.js"></script>
+
 <script src="js/donation.js"></script>
     <script type='text/javascript' src='js/jquery/jquery.js'></script>
     <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
